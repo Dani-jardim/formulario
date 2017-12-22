@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>formulario</title>
+	<script type="text/javascript" src="js/calcular.js"></script>
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+<form method="post" id="fContato" action="mailto:contato@danijaridm.com.br" oninput="calcTotal();">
+
+	<fieldset id="usuario"><legend>Usuário</legend>
+	<p><label for="cname">Nome:</label>
+		<input type="text" name="tnome" id="cnome" size="20" maxlength="5" placeholder="Digite seu nome"/></p>
+	<p><label for="cdate">Nasc:</label>
+		<input type="date" name="tdate" id="cdate"/></p>
+	<p><label for ="csenha">Senha:</label>
+		<input type="password" mame="tsenha" id="csenha" size="20" maxlength="5" placeholder="Senha aqui"/></p>
+	<p><label for="cmail">Email:</label>
+		<input type="email" name="temail" id="cemail" size="20" placeholder="seu email"/>
+		
+		<fieldset id="sexo"><legend>Sexo</legend>
+		<input type="radio" name="tSexo" id="cfem"/>
+		<label for="cfem">feminino</label></br>
+		<input type="radio" name="tSexo" id="cmasc" checked />
+		<label for="cmasc">masculino</label>
+		</fielset>
+
+	</fieldset>
+
+	<fieldset id="endereco"><legend>Endereço:</legend>
+
+		<p><label for="trua"> Logradouro:</label>
+			<input type="text" name="trua" id="crua" size="20" maxlength="10" placeholder="AV,RUA"/></p>
+
+		<p><label for="cnumero">Numero:</label>
+			<input type="number" name="tnumero" id="cnumero" min="0" max="99999"/><p>
+
+		<p><label for="cestado">Estado:</label>
+				<select name="testado" id="cesatdo"/>
+					<optgroup label="Região Sudeste">
+					<option value="RJ">Rio de Janeiro</option>
+					<option value="SP" selected >Sao Paulo</option>
+					<option value="MG">Minas Gerais</option>
+			</optgroup>
+				<optgroup label="Região Sul">
+					<option value="PR">Paraná</option>
+					<option value="SC">Santa Catarina</option>
+					<option value="RS">Rio Grande do Sul</option>
+			</optgroup>
+				</select>
+
+
+			<p><label for="ccidade">Cidades:</label>
+			<input type="text" name="tcidade" id="ccidade" maxlength="20" list="cidades" />
+			<datalist id="cidades">
+				<option value="Rio de Janeiro"></option>
+				<option value="Nova Iguaçu"></option>
+				<option value="Niterói"></option>
+				<option value="Belford Roxo"></option>
+
+			</datalist>
+	</fieldset>
+
+	<fieldset id="mensagem"><legend>Mensagem</legend>
+
+		<p><label for="cgrau">grau de urgencia:</label>
+			Min<input type="range" name="tgrau" id="cgrau" min="1" max="10" step="2"/>Max
+		<p><label for="cmensagem">mensagem:</label>
+			<textarea name="tmensagem" id="cmensagem" cols="45" rows="5" placeholder="Digite sua mensagem" /></textarea>
+	</fieldset>
+	
+	<fieldset id="cor"><legend>Quero um google</legend> 
+		<input type="checkbox" checked /><label>Gostaria de receber email</label>
+
+		<p><label for="ccor">Cor:</label>
+			<input type="color" value="#e41515" name="tcor" id="ccor" maxlenfth="20"/> 
+		<p><label for="cqtd">Quantidade</label>
+			<input type="number" name="tqtd" id="cqtd" min="1" max="10"/>
+		<p><label for="cpreco">Preço total:</label>
+			<input type="" name="tpreco" id="cpreco" maxlength="20" placeholder="seu preço" readonly/>
+	</fieldset>
+
+		<input type="submit" value="Enviar"/>
+</form>
+	
+
+</body>
+</html>
